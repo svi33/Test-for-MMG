@@ -7,7 +7,7 @@ use App\Http\Requests\CommentRequest;
 use App\Post;
 use Illuminate\Http\Request;
 use App\Rules\Author_Rule;
-//use Illuminate\Support\Facades\Validator;
+
 
 
 class CommentController extends Controller
@@ -33,7 +33,7 @@ class CommentController extends Controller
             $comment->post_id = 0;
             $comment->category_id = $request->category_id;
         }
-      //if($request->category_id){$comment->category_id = $request->category_id;}else{$comment->category_id = 0;}
+
         $comment->author = $request->author;
         $comment->content = $request->content;
 

@@ -37,7 +37,6 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $comments = Comment::where('category_id', $id)->get();
         return view('categories.show', compact('category', 'comments'));
-        // return view('categories.show', compact(['category','comments']));
     }
 
 

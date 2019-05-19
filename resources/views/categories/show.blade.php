@@ -85,19 +85,15 @@
 
                     error: function (data) {
                         $('.alert').removeClass('show').addClass('hidden');
-                        //console.log(data);
                         var errors = $.parseJSON(data.responseText);
                         var firstItem = Object.values(errors)[1];
                         var ErMes=Object.values(firstItem)[0];
-                        //console.log(firstItem);
                         jQuery('.alert-danger').show();
                         jQuery('.alert-danger').append('<p>'+ErMes+'</p>');
                     }
                 });
             });
         });
-
-
 
     </script>
 

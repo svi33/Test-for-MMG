@@ -9,11 +9,6 @@ use Jenssegers\Agent\Agent;
 class Session extends Model
 {
     public static function getUserAgents(){
-        //        $getData = DB::table('sessions')
-//            ->select('user_agent', DB::raw('count(*) as total'))
-//            ->groupBy('user_agent')
-//            ->get();
-//        return $getData;
 
         $getData = self::select('user_agent')->get()->toArray();
         $agent = new Agent();
